@@ -1,3 +1,13 @@
+<?php
+//Manejo de la sesion
+session_start();
+//Si todo estpa bien vamos a redirigir al dashboard
+if (!isset($_SESSION['admin_logged_in'])) {
+    header("Location: index.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
