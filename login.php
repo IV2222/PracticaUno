@@ -3,7 +3,7 @@
 session_start();
 //Si todo estpa bien vamos a redirigir al dashboard
 if (isset($_SESSION['admin_logged_in'])) {
-    header("Location: dashboard.php");
+    header("Location: index.php");
     exit;
 }
 $error = '';
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($usuarioDB && password_verify($pass, $usuarioDB['password'])) {
         $_SESSION['admin_logged_in'] = true;
         $_SESSION['username'] = $usuarioDB['username'];
-        header("Location: dashboard.php");
+        header("Location: index.php");
     } else {
         $error = "Credenciales incorrectas.";
     }

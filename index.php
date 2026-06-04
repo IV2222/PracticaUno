@@ -3,7 +3,7 @@
 session_start();
 //Si todo estpa bien vamos a redirigir al dashboard
 if (!isset($_SESSION['admin_logged_in'])) {
-    header("Location: index.php");
+    header("Location: login.php");
     exit;
 }
 ?>
@@ -79,7 +79,8 @@ if (!isset($_SESSION['admin_logged_in'])) {
                                     <label class="form-check-label" for="desc_25">25%</label>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Procesar Cotización</button>
+                            <button type="submit" class="btn btn-primary w-100 mt-3">Procesar Cotización</button>
+                            <a class="btn btn-danger w-100 mt-3" href="dashboard.php">Ir al Dashboard</a>
                         </form>
                     </div>
                 </div>
